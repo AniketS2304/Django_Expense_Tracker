@@ -4,4 +4,11 @@ from django.contrib import admin
 
 from user_auth.models import * 
 
-admin.site.register(User)
+class UserAdmin(admin.ModelAdmin):
+    list_display = [
+    "name",
+    "email",
+    # "password"
+    ]
+
+admin.site.register(User, UserAdmin)
