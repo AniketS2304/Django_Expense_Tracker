@@ -1,0 +1,17 @@
+from django.db import models
+
+# Create your models here.
+class CurrentBalance(models.Model):
+    current_balance = models.FloatField(default=0)
+    
+    
+class TrackingHistory(models.Model):
+    current_balance = models.ForeignKey(CurrentBalance , on_delete=models.CASCADE)
+    expense_type = models.CharField(choices=(('CREDIT', 'CREDIT'), ('DEBIT', 'DEBIT')), max_length=200)
+    amount = models.FloatField()
+    description = models.CharField(max_length=200)
+    createdAt = models.DateTimeField(auto_now_add=True)
+
+
+    def __str__(self) -> str:
+        return f"The amount is {self.amount} for {self.description} and expense type is {self.expense_type}"
