@@ -25,9 +25,10 @@ SECRET_KEY = 'django-insecure-fcd3!lkvg%5vsoi90028!+6^hkw#qy69c++-2w=_)7f9&xi!!3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    "django-expense-tracker-1-h4lo.onrender.com"
-]
+# ALLOWED_HOSTS = [
+#     "django-expense-tracker-1-h4lo.onrender.com"
+# ]
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
 
 
 # Application definition
