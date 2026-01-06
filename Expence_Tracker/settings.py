@@ -139,3 +139,7 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+ALLOWED_HOSTS = [
+    "django-expense-tracker-1-h4lo.onrender.com",
+]
