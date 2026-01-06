@@ -36,9 +36,9 @@ ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
 if not ALLOWED_HOSTS or ALLOWED_HOSTS == [""]:
     ALLOWED_HOSTS = ["localhost", "127.0.0.1", ".onrender.com"]
 
-CSRF_TRUSTED_ORIGINS = [
-    "https://*.onrender.com",
-]
+# CSRF_TRUSTED_ORIGINS = [
+#     "https://*.onrender.com",
+# ]
 # Application definition
 
 INSTALLED_APPS = [
@@ -140,7 +140,7 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-ALLOWED_HOSTS = [
-    "*",
-    "django-expense-tracker-1-h4lo.onrender.com",
-]
+# ALLOWED_HOSTS = [
+#     "*",
+#     "django-expense-tracker-1-h4lo.onrender.com",
+# ]
